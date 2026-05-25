@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Sistema Biblioteca</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <div class="container">
+
+    <header class="hero">
+
+      <h1>📚 Sistema de Biblioteca</h1>
+
+      <p>
+        Gestión de libros, usuarios y préstamos
+      </p>
+
+    </header>
+
+    <!-- ================= LIBROS ================= -->
+
+    <section class="card">
+
+      <div class="section-title">
+
+        <h2>📘 Libros</h2>
+
+        <span>Catálogo disponible</span>
+
+      </div>
+
+      <div class="form-group">
+
+        <input
+          id="titulo"
+          placeholder="Título del libro"
+        >
+
+        <input
+          id="autor"
+          placeholder="Autor"
+        >
+
+        <input
+          id="categoria"
+          placeholder="Categoría"
+        >
+
+        <button onclick="agregarLibro()">
+          Agregar Libro
+        </button>
+
+      </div>
+
+      <div class="list-container">
+
+        <ul id="listaLibros"></ul>
+
+      </div>
+
+    </section>
+
+    <!-- ================= USUARIOS ================= -->
+
+    <section class="card">
+
+      <div class="section-title">
+
+        <h2>👤 Usuarios</h2>
+
+        <span>Usuarios registrados</span>
+
+      </div>
+
+      <div class="form-group">
+
+        <input
+          id="nombreUsuario"
+          placeholder="Nombre del usuario"
+        >
+
+        <input
+          id="correoUsuario"
+          placeholder="Correo electrónico"
+        >
+
+        <button onclick="agregarUsuario()">
+          Agregar Usuario
+        </button>
+
+      </div>
+
+      <div class="list-container">
+
+        <ul id="listaUsuarios"></ul>
+
+      </div>
+
+    </section>
+
+    <!-- ================= PRÉSTAMOS ================= -->
+
+    <section class="card">
+
+      <div class="section-title">
+
+        <h2>📦 Préstamos</h2>
+
+        <span>Control de préstamos activos</span>
+
+      </div>
+
+      <div class="form-group">
+
+        <input
+          id="idUsuarioPrestamo"
+          placeholder="ID Usuario"
+        >
+
+        <input
+          id="idLibroPrestamo"
+          placeholder="ID Libro"
+        >
+
+        <button onclick="crearPrestamo()">
+          Registrar Préstamo
+        </button>
+
+        <button
+          class="secondary-btn"
+          onclick="cargarPrestamos()"
+        >
+          Actualizar Lista
+        </button>
+
+      </div>
+
+      <div class="list-container">
+
+        <ul id="listaPrestamos"></ul>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
